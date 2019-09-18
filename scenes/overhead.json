@@ -1,0 +1,116 @@
+{
+    "name":"testscene",
+    "camera1":{
+            "pos": [-1.00, 12.42, -0.21],
+            "rot": [0.73, 0.00, 0.00, 0.69],
+            "fovy": 1.0
+            },
+    "camera2":{
+            "pos": [0.00, 1.50, -5.00],
+            "rot": [0.00, 1.00, 0.00, 0.00],
+            "fovy": 1.0
+            }, 
+    "materials":{
+        "green":{
+            "color":[0.0, 1.0, 0.0]
+        },
+        "red":{
+            "color":[1.0, 0.0, 0.0]
+        }
+    },
+    
+    "children":[
+        { 
+            "shape":
+                {
+                "type":"box",
+                "length":1,
+                "width":1,
+                "height":1,
+                "center":[0, 0, 0]
+                },
+            "material":"green",
+            "transform":[1, 0, 0, 0,
+                         0, 1, 0, 0.5,
+                         0, 0, 1, 0,
+                         0, 0, 0, 1],  
+            "children":[
+                { 
+                "shape":
+                    {
+                    "type":"box",
+                    "length":1,
+                    "width":1,
+                    "height":1,
+                    "center":[0, 0, 0]
+                    },
+                "transform":[2, 0, 0, 2,
+                             0, 1, 0, 0,
+                             0, 0, 1, 0,
+                             0, 0, 0, 1]     
+                }
+            ]
+        },
+        {
+            "shape":{
+                    "type":"mesh",
+                    "filename":"../meshes/square.off"
+                    },
+            "material":"green",
+            "transform":[20, 0, 0, 0,
+                         0, 20, 0, 0,
+                         0, 0, 20, 0,
+                         0, 0, 0, 1]     
+        },
+        {
+            "shape":{
+                    "type":"sphere",
+                    "radius":0.5,
+                    "center":[0, 0, -10]
+                    },
+            "material":"green",
+            "transform":[2, 0, 0, 0,
+                         0, 1, 0, 0,
+                         0, 0, 1, 0,
+                         0, 0, 0, 1]     
+        },
+        {
+            "shape":{
+                    "type":"sphere",
+                    "radius":2,
+                    "center":[4, 0, -10]
+                    },
+            "material":"green",
+            "transform":[1, 0, 0, 0,
+                         0, 1, 0, 0,
+                         0, 0, 1, 0,
+                         0, 0, 0, 1]     
+        },
+        {
+            "shape":{
+                    "type":"cylinder",
+                    "radius":1,
+                    "height":3,
+                    "center":[-4, 0, 0]
+                    },
+            "material":"red",
+            "transform":[1, 0, 0, 0,
+                         0, 1, 0, 0,
+                         0, 0, 1, 0,
+                         0, 0, 0, 1]     
+        },
+        {
+            "shape":{
+                    "type":"cone",
+                    "radius":1,
+                    "height":2,
+                    "center":[-4, 0, -4]
+                    },
+            "material":"red",
+            "transform":[1, 0, 0, 0,
+                         0, 1, 0, 0,
+                         0, 0, 1, 0,
+                         0, 0, 0, 1]     
+        }
+    ]
+}
